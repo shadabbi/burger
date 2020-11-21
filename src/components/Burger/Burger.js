@@ -10,7 +10,6 @@ function Burger(props) {
     });
   });
 
-  console.log();
   return (
     <div className={classes.burger}>
       {<Ingredient type="bread-top" />}

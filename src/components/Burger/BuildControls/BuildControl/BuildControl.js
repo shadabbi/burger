@@ -9,6 +9,7 @@ function BuildControl(props) {
       <button
         className={classes.Less}
         onClick={() => props.removeIngredientHandler(props.type)}
+        disabled={props.disabled[props.type]}
       >
         Less
       </button>
