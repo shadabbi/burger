@@ -4,10 +4,6 @@ import Aux from "../../hoc/auxiliary";
 import Button from "../UI/Button/Button";
 
 class OrderSummary extends Component {
-  componentDidUpdate() {
-    console.log("ordersummary");
-  }
-
   render() {
     const ingredientsSummary = Object.keys(this.props.ingredients).map(
       (key) => {
@@ -32,7 +28,12 @@ class OrderSummary extends Component {
         <Button clicked={this.props.purchaseHandler} btnType="Danger">
           CANCEL
         </Button>
-        <Button clicked={this.props.purchaseContinueHandler} btnType="Success">
+        <Button
+          clicked={() => {
+            this.props.purchaseContinueHandler();
+          }}
+          btnType="Success"
+        >
           PROCEED
         </Button>
       </Aux>
